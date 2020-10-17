@@ -1,3 +1,9 @@
 <resources>
+<<<<<<< HEAD
     <string name="app_name">CandyCoded</string>
 </resources>
+=======
+    <string name="app_name">Candy Coded</string>
+    <string name="products_title">Products</string>
+</resources>
+>>>>>>> 798c0c06598ad9a922530f69a170979f0bc78443

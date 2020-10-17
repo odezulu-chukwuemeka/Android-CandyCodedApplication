@@ -2,14 +2,21 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 28
+<<<<<<< HEAD
     buildToolsVersion "30.0.0"
 
     defaultConfig {
         applicationId "com.example.candycoded"
+=======
+    buildToolsVersion '28.0.3'
+    defaultConfig {
+        applicationId "com.pluralsight.candycoded"
+>>>>>>> 798c0c06598ad9a922530f69a170979f0bc78443
         minSdkVersion 15
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
+<<<<<<< HEAD
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -31,3 +38,40 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
 }
+=======
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
+
+    sourceSets.test.resources.srcDirs += ["src/main"]
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:28.0.0'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.loopj.android:android-async-http:1.4.9'
+    compile 'com.google.code.gson:gson:2.8.0'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+
+    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.2'
+    androidTestCompile 'com.android.support.test.espresso:espresso-intents:2.2.2'
+    androidTestCompile 'com.android.support:support-annotations:25.3.0'
+
+    testCompile 'junit:junit:4.12'
+    testCompile 'com.github.javaparser:javaparser-core:3.0.1'
+    //testCompile "org.mockito:mockito-core:2.+"
+    testCompile "org.powermock:powermock-module-junit4:1.7.1"
+    testCompile "org.powermock:powermock-api-mockito2:1.7.1"
+    testCompile "org.powermock:powermock-core:1.7.1"
+    testCompile "org.robolectric:robolectric:3.3.2"
+}
+>>>>>>> 798c0c06598ad9a922530f69a170979f0bc78443
